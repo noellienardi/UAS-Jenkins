@@ -1,0 +1,6 @@
+FROM mysql
+# menggunakan mysql. versi tidak saya sebut agar tidak bermasalah
+ENV MYSQL_ROOT_PASSWORD root
+# set password milik root adalah root
+COPY trucorp-db.sql /docker-entrypoint-initdb.d/
+# copy file database tadi ke dalam docker
